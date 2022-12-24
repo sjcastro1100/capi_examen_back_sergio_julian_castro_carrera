@@ -6,6 +6,9 @@ use App\Model;
 use Faker\Generator as Faker;
 use App\User;
 
+/**
+ * Crea el registro de usuario
+ */
 $factory->define(User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,

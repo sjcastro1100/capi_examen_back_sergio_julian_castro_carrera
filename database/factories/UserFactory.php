@@ -18,6 +18,9 @@ use Illuminate\Support\Str;
 |
 */
 
+/**
+ * Crea registro del domicilio del usuario y le asigna el id del usuario creado
+ */
 $factory->define(App\UserDomicilio::class, function (Faker $faker) {
     return [
        'user_id' => factory(App\User::class)->create(),

@@ -3,7 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-
+use Carbon\Carbon;
 class UserResource extends JsonResource
 {
     /**
@@ -17,6 +17,7 @@ class UserResource extends JsonResource
         return [
             'id' => $this->id,
             'fecha_nacimiento' => $this->fecha_nacimiento,
+            'edad' => abs(Carbon::parse($this->fecha_nacimiento)->diffInYears(Carbon::now())),
             'email' => $this->email,
             'direccion' => $this->domicile,
         ];

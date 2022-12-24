@@ -16,6 +16,7 @@ class UserResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'nombre' => $this->name,
             'fecha_nacimiento' => $this->fecha_nacimiento,
             'edad' => abs(Carbon::parse($this->fecha_nacimiento)->diffInYears(Carbon::now())),
             'email' => $this->email,
